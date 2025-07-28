@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>UK vs SA Cost Calculator</title>
+  <link rel="stylesheet" href="css/styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+    <img src="images/logo.png" alt="Logo" class="logo" />
+    <h1>UK in House Vs SA Outsourced Staff Calculator</h1>
+
+    <label for="uk-salary">UK Annual Salary: £<span id="salary-value">50,000</span></label>
+    <input type="range" id="uk-salary" min="0" max="100000" step="1000" value="50000" />
+
+    <label for="ni">Employer NI %:</label>
+    <input type="number" id="ni" value="13.8" />
+
+    <label for="pension">Employer Pension %:</label>
+    <input type="number" id="pension" value="3" />
+
+    <label for="billable-slider">% of hours billable: <span id="billable-label">80%</span></label>
+    <input type="range" id="billable-slider" min="30" max="85" value="80" />
+
+    <label for="level">Level of Staff (SA):</label>
+    <select id="level">
+      <option value="senior">Senior</option>
+      <option value="semi">Semi-Senior</option>
+    </select>
+
+    <button onclick="calculate()">Calculate Savings</button>
+
+    <div class="result" id="result"></div>
+  </div>
+
+  <script src="js/calculator.js"></script>
+</body>
+</html>
